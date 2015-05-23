@@ -14,32 +14,24 @@ A helper function readtidyset is provided to read the generated tidyset inside R
 
 mergedata
 
-Purpose: to merge all the data from the various text files into a single giant data table. No subset or extractions performed on the data set once merged.
+To merge all the data from the various text files into a single giant data table. No subset or extractions performed on the data set once merged.
 
-Parameters: directory: a character vector that indicates the folder residing inside the working directory
+A merged data table containing training and test data and 3 additional columns for subject, activity, and activity id. This amounts to 10299 observations of 564 variables
 
-Value: alldata: a merged data table containing training and test data and 3 additional columns for subject, activity, and activity id. This amounts to 10299 observations of 564 variables
+Eextractmeanstd
 
-extractmeanstd
+Performs subset on the giant data set of merged data to extract just the mean and std related data
 
-Purpose: Performs subset on the giant data set of merged data to extract just the mean and std related data
-
-Parameters: dataset: a data table containing the training set and test set data and 3 additional columns for subject, activity, and activity id directory: a character vector that indicates the folder residing inside the working directory
-
-Value: extracteddataset: after performing subset on the dataset parameter, this is a data table that contains just 10299 observations of 69 variables basically the same 3 additional columns of subject, activity, and activity id plus the 66 columns whose headers contain the characters mean() and std()
+Extracteddataset: after performing subset on the dataset parameter, this is a data table that contains just 10299 observations of 69 variables basically the same 3 additional columns of subject, activity, and activity id plus the 66 columns whose headers contain the characters mean() and std()
 
 meltdataandwritetidyset
 
-Purpose: Performs melt data, casting back to tidy data format, and then writing the data out to a text file
+Performs melt data, casting back to tidy data format, and then writing the data out to a text file
 
-Parameters: extractedmeanstddataset: a data table containing the training set and test set data and 3 additional columns for subject, activity, and activity id but has already extracted out the mean and std columns pathtotidysetfile: a character vector that indicates the path to write the tidy set file to
-
-Value: nil
+extractedmeanstddataset: a data table containing the training set and test set data and 3 additional columns for subject, activity, and activity id but has already extracted out the mean and std columns pathtotidysetfile: a character vector that indicates the path to write the tidy set file to
 
 readtidyset
 
-Purpose: Reads the tidy set file back into data table
+Reads the tidy set file back into data table
 
-Parameters: pathtotidysetfile: a character vector that indicates the path to the tidy set file
-
-Value: datatable of data inside the tidy set file
+pathtotidysetfile: a character vector that indicates the path to the tidy set file
