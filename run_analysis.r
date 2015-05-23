@@ -1,12 +1,5 @@
 ## Create one R script called run_analysis.R that does the following:
-
-
-
-
-
-
-
-## Assumed that the data are in /data
+## The data are in /data
 ## ---
 ##  |
 ##  |---run_analysis.R
